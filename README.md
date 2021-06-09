@@ -15,6 +15,14 @@ And those configurable port & account/password values are stored in **dev.env** 
 
 Execute `dev_start.ps1` in PowerShell Core.
 
+### Start only PostGIS
+
+Set environment variable `COMPOSE_PROFILES` to **dev** before executing `dev_start.ps1`:  
+
+```powershell
+$env:COMPOSE_PROFILES='dev'; dev_start.ps1
+```
+
 ### Stop PostGIS & pgAdmin
 
 Execute `dev_stop.ps1` in PowerShell Core.
