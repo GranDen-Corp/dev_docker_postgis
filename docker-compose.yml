@@ -1,7 +1,6 @@
 version: "3.8"
 services:
   db:
-    container_name: ${POSTGIS_SERVER}
     hostname: ${POSTGIS_SERVER}
     image: postgis/postgis:${POSTGIS_IMG_TAG:-latest}
     restart: on-failure
@@ -17,7 +16,6 @@ services:
       - dev
       - pgadmin
   pgadmin:
-    container_name: ${PGADMIN_SERVER}
     hostname: ${PGADMIN_SERVER}
     image: dpage/pgadmin4:${PGADMIN_IMG_TAG:-latest}
     depends_on:
@@ -38,4 +36,4 @@ services:
 
 volumes:
   postgis-data:
-    name: ${POSTGIS_SERVER}-postgis-data
+    name: ${COMPOSE_PROJECT_NAME:-dev_docker_postgis}-${POSTGIS_SERVER}-postgis-data
