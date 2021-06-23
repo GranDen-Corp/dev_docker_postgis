@@ -15,6 +15,8 @@ And those configurable port & account/password values are stored in **dev.env** 
 
 Execute `dev_start.ps1` in PowerShell Core.
 
+To customize additional parameters like *docker-compose project name*, *PostGis DB name* & *DB binding port*, *pgAdmin4 binding port*, look up help by invoking `Get-Help .\dev_start.ps1 -Full`.
+
 ### Start only PostGIS
 
 Set environment variable `COMPOSE_PROFILES` to **dev** before executing `dev_start.ps1`:  
