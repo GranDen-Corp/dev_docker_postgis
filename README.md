@@ -38,3 +38,7 @@ Execute `dev_remove.ps1` in PowerShell Core.
 ### Remove container and data
 
 Execute `dev_remove.ps1 --volumes` in PowerShell Core.
+
+## Additional Notes
+
+Customized docker-compose project environment variables are stored in `.env` file inside top folder, to reset customized setting, just run `dev_remove.ps1` and also remove that `.env` file.
