@@ -47,12 +47,12 @@ param (
 )
 
 $compose_yml_path = Join-Path -Path "$PSScriptRoot" -ChildPath "docker-compose.yml";
-Write-Debug "`$compose_yml_path= $compose_yml_path";
+Write-Debug "`$compose_yml_path='$compose_yml_path'";
 $dev_env_path = Join-Path -Path "$PSScriptRoot" -ChildPath $TEMPLATE_ENV_FILE;
-Write-Debug "`$dev_env_path= $dev_env_path";
+Write-Debug "`$dev_env_path='$dev_env_path'";
 $default_env_file_path = Join-Path -Path "$PSScriptRoot" -ChildPath ".env";
-Write-Debug "`$default_env_file_path= $default_env_file_path";
-Write-Debug "`$DOCKER_COMPOSE_ARGS= $DOCKER_COMPOSE_ARGS"
+Write-Debug "`$default_env_file_path='$default_env_file_path'";
+Write-Debug "`$DOCKER_COMPOSE_ARGS='$DOCKER_COMPOSE_ARGS'";
 
 if ($DOCKER_COMPOSE_PROJECT_NAME) {
     if (!(Test-Path $default_env_file_path)) {
