@@ -15,7 +15,13 @@ And those configurable port & account/password values are stored in **dev.env** 
 
 Execute `dev_start.ps1` in PowerShell Core.
 
-To customize additional parameters like *docker-compose project name*, *PostGis DB name* & *DB binding port*, *pgAdmin4 binding port*, look up help by invoking `Get-Help .\dev_start.ps1 -Full`.
+To customize additional parameters like *docker-compose project name*, *PostGis DB name* & *DB binding port*, *pgAdmin4 binding port*, look up help by invoking `Get-Help .\dev_start.ps1 -Full`, for example:
+
+```powershell
+dev_start.ps1 -compose_proj local-test -gis_db local_dev -gis_port 5433 -admin_port 8089
+```
+
+If you need to reset those parameters, just remove the `.env` environment variables file in base folder.
 
 ### Start only PostGIS
 
